@@ -1,7 +1,7 @@
 from OmaModul import *
 
-salasõnad=loe_failist=("Salasõnad_failisit.txt")
-kasutajanimed=loe_failist=("Kasutajad.txt")
+salasõnad=loe_failist("Salasõnad_failisit.txt")
+kasutajanimed=loe_failist("Kasutajad.txt")
 while True:
     print(kasutajanimed)
     print(salasõnad)
