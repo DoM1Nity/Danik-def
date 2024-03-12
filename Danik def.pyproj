@@ -22,7 +22,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Danik_def.py" />
+    <Compile Include="module1.py" />
     <Compile Include="OmaModul.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ban" />
+    <Content Include="Päevad.txt" />
+    <Content Include="Kasutajad.txt" />
+    <Content Include="Salasõnad_faillist.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
