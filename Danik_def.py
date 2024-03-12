@@ -1,7 +1,7 @@
 from OmaModul import *
 
-salasõnad=loe_failist=("Salasõnad.txt")
-kasutajanimed=loe_failist=["Kasutajad.txt"]
+salasõnad=loe_failist=("Salasõnad_failisit.txt")
+kasutajanimed=loe_failist=("Kasutajad.txt")
 while True:
     print(kasutajanimed)
     print(salasõnad)
@@ -19,10 +19,10 @@ while True:
         if vastus=="nime":
             kasutajanimed=nimi_või_parooli_muutmine(kasutajanimed)
         elif vastus=="parool":
-            salasõnad==nimi_või_parooli_muutmine(salasõnad)
+            salasõnad=nimi_või_parooli_muutmine(salasõnad)
         elif vastus=="mõlemad":
             kasutajanimed=nimi_või_parooli_muutmine(kasutajanimed)
-            salasõnad==nimi_või_parooli_muutmine(salasõnad)
+            salasõnad=nimi_või_parooli_muutmine(salasõnad)
     elif vastus == 4:
         print("Unustanud üarooli taastamine")
         kasutajanimed, salasõnad = unustanud_üarooli_taastamine(kasutajanimed, salasõnad)
@@ -30,4 +30,4 @@ while True:
         print("lõpetamine")
         break
     else:
-        print("Tundmatu valik")  
+        print("Tundmatu valik")     

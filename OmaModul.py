@@ -91,7 +91,7 @@ def unustanud_üarooli_taastamine(kasutajad: list, paroolid: list):
         else:
             print("Parooli muutmine tühistatud.")
     else:
-        print("Sellise kasutajanimega kasutajat ei leitud.")
+        print("Sellise kasutajanimega kasutajat ei leitud.")    
 
     return kasutajad, paroolid
 def loe_failist(fail:str)->list:
