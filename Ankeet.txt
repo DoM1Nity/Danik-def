@@ -1,0 +1,10 @@
+1.Milline loom on USA sümbol?
+2.Mis on maailma kõrgeima mäe nimi?
+3.Kes kirjutas romaani "Kuritöö ja karistus"?
+4.Milline riik on pindalalt maailma väikseim?
+5.Mis aasta oli Esimese maailmasõja algus?
+6.Mis on maa suurima ookeani nimi?
+7.Kes on kujutatud USA dollaril?
+8.Mis on teadusharu nimi, mis uurib inimese käitumist ja mõtteprotsesse?
+9.Mis on Maa atmosfääris kõige rikkalikum gaas?
+10.Milline linn on Jaapani pealinn?

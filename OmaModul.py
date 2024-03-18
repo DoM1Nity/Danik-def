@@ -1,6 +1,8 @@
 ﻿from string import *
-from time import sleep
+from time import *
 from os import path, remove
+from random import *
+
 def registreerimine(kasutajad:list,paroolid:list)->any:
     """Kirjeldus
     :param list kasutajad: Kirjeldus
@@ -37,6 +39,7 @@ def registreerimine(kasutajad:list,paroolid:list)->any:
         else:
             print("Selline kasutaja on juba olemas!")
     return kasutajad, paroolid
+
 def autoriseerimine(kasutajad:list,paroolid:list):
     """Funktsioon kuvab ekraanile "Tere tulemast!" kui kasutaja on olemas nimekirjas
         Nimi on järjendis kasutajad
@@ -63,6 +66,7 @@ def autoriseerimine(kasutajad:list,paroolid:list):
                         for i in range(10):
                             sleep(1)
                             print(f"On jäänud {10-i} sek")
+            break
         else:
             print("Kasutajat pole")
 def nimi_või_parooli_muutmine(list_:list):
@@ -74,6 +78,7 @@ def nimi_või_parooli_muutmine(list_:list):
         muutuja=input("Uus nimi või parool: ")
         list_[indeks]=muutuja
     return list_
+
 def unustanud_üarooli_taastamine(kasutajad: list, paroolid: list):
     """Funktsioon aitab kasutajal unustatud parooli taastada."""
     nimi = input("Sisesta kasutajanimi, mille parooli soovid taastada: ")
@@ -94,6 +99,7 @@ def unustanud_üarooli_taastamine(kasutajad: list, paroolid: list):
         print("Sellise kasutajanimega kasutajat ei leitud.")    
 
     return kasutajad, paroolid
+
 def loe_failist(fail:str)->list:
     """Funktsioon loeb tekst *.txt failist
     """
@@ -101,19 +107,9 @@ def loe_failist(fail:str)->list:
     järjend=[]
     for rida in f:
         järjend.append(rida.strip())
-    f.close
-    return järjend
-	
-
-def loe_failist(fail:str)->list:
-    """Funktsioon loeb tekst *.txt failist
-    """
-    f=open(fail,'r',encoding="utf-8")
-    järjend=[]
-    for rida in f:
-        järjend.append(rida.strip())
     f.close()
     return järjend
+
 def kirjuta_failisse(fail:str,järjend=[]):
     """Salvestame tekst failisse
     """
@@ -124,6 +120,7 @@ def kirjuta_failisse(fail:str,järjend=[]):
     for element in järjend:
         f.write(element+"\n")
     f.close()
+
 def ümber_kirjuta_fail(fail:str):
     """
     """
@@ -131,12 +128,27 @@ def ümber_kirjuta_fail(fail:str):
     text=input("Sisesta tekst:")
     f.write(text+"\n")
     f.close()
+
 def failide_kustutamine():
     """
     """
     failinimi=input("Mis fail tahad eemaldada?") #path.isdir("Kaust")
     if path.isfile(failinimi):
-        remove(failinimi)
-        print(f"Fail {failinimi} oli kustutatud")
+       remove(failinimi)
+       print(f"Fail {failinimi} oli kustutatud")
     else:
         print(f"Fail {failinimi} puudub")
+
+def loe_ankeet(fail:str)->any:
+    """
+    """
+    fail=open(fail,"r",encoding="utf-8")
+    kus=[]
+    vas=[]
+    for line in fail:
+        n=line.find(":")  #разделить
+        kus.append(line[0:n].strip())
+        vas.append(line[n+1:len(line)].strip())
+    fail.close()
+    return kus,vas
+
